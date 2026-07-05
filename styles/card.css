@@ -1,0 +1,43 @@
+.subscription-card-content{
+    background-color: #e5c3c3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: #0b0000;
+}
+
+div button{
+    background-color: #7f76e6;
+    color: #fff;
+   
+    padding: 10px 20px;
+    border-radius: 40px;
+   
+}
+div button:hover{
+    
+    background-color: #e81818;
+   
+}
+
+.subscription-card{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    /* border: 8px solid #7f76e6; */
+}
+.best-deal-badge{
+    background-color: #deedd5;
+    position: absolute;
+    top: 200px;
+    right: 710px;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    padding: 3px;
+    font-style: italic;
+}
