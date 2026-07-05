@@ -1,43 +1,76 @@
-.subscription-card-content{
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    padding: 24px;
+}
+
+.subscription-card-content {
     background-color: #e5c3c3;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     color: #0b0000;
+    /* height: 100%; */
 }
 
-div button{
+div button {
     background-color: #7f76e6;
     color: #fff;
-   
     padding: 10px 20px;
     border-radius: 40px;
-   
-}
-div button:hover{
-    
-    background-color: #e81818;
-   
 }
 
-.subscription-card{
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    justify-content: center;
-    align-items: center;
-    height: 800px;
-    /* border: 8px solid #7f76e6; */
+div button:hover {
+    background-color: #e81818;
 }
-.best-deal-badge{
+
+.subscription-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-items: center;
+    /* border: 8px solid #7f76e6; */
+    /* height: 1000px; */
+}
+
+.subscription-card > div {
+    position: relative;
+    top: 100px;
+}
+
+.best-deal-badge {
     background-color: #deedd5;
     position: absolute;
-    top: 200px;
-    right: 710px;
+    top: 10px;
+    right: 10px;
     width: 100px;
     border-radius: 5px;
     text-align: center;
     font-size: 20px;
     padding: 3px;
     font-style: italic;
+    z-index: 2;
+}
+
+@media (max-width: 900px) {
+    .subscription-card {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .subscription-card {
+        grid-template-columns: 1fr;
+    }
+
+    .best-deal-badge {
+        top: 8px;
+        right: 8px;
+    }
 }
